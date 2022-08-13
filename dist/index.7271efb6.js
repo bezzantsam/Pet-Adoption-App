@@ -22957,9 +22957,17 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _s = $RefreshSig$();
+const ANIMALS = [
+    "bird",
+    "cat",
+    "dog",
+    "rabbit",
+    "reptile"
+];
 const SearchParams = ()=>{
     _s();
     const [location, setLocation] = _react.useState("");
+    const [animal1, setAnimal] = _react.useState("");
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "search-params",
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
@@ -22974,35 +22982,80 @@ const SearchParams = ()=>{
                             placeholder: "Location"
                         }, void 0, false, {
                             fileName: "src/SearchParams.js",
-                            lineNumber: 10,
+                            lineNumber: 13,
+                            columnNumber: 11
+                        }, undefined),
+                        "onChange= ",
+                        (e)=>setLocation(e.target.value)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/SearchParams.js",
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                    htmlFor: "animal",
+                    children: [
+                        "Animal",
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
+                            id: "animal",
+                            value: animal1,
+                            onChange: (e)=>{
+                                setAnimal(e.target.value);
+                                setBreed("");
+                            },
+                            onBlur: (e)=>{
+                                setAnimal(e.target.value);
+                                setBreed("");
+                            },
+                            children: [
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                }, void 0, false, {
+                                    fileName: "src/SearchParams.js",
+                                    lineNumber: 30,
+                                    columnNumber: 13
+                                }, undefined),
+                                ANIMALS.map((animal)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                        value: animal,
+                                        children: animal
+                                    }, animal, false, {
+                                        fileName: "src/SearchParams.js",
+                                        lineNumber: 32,
+                                        columnNumber: 15
+                                    }, undefined)
+                                )
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/SearchParams.js",
+                            lineNumber: 18,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/SearchParams.js",
-                    lineNumber: 8,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
                     children: " Submit "
                 }, void 0, false, {
                     fileName: "src/SearchParams.js",
-                    lineNumber: 12,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/SearchParams.js",
-            lineNumber: 7,
+            lineNumber: 10,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/SearchParams.js",
-        lineNumber: 6,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined));
 };
-_s(SearchParams, "JMkk70NnkYHwacJIVl+G29lh6iI=");
+_s(SearchParams, "cckQz6ZRSzgY8/FZdk5FpZDd7S8=");
 _c = SearchParams;
 exports.default = SearchParams;
 var _c;
