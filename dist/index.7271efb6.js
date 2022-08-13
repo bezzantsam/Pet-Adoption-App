@@ -22955,47 +22955,54 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 const SearchParams = ()=>{
-    const location = "Seattle, Wa";
+    _s();
+    const [location, setLocation] = _react.useState("");
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "search-params",
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
                     htmlFor: "location",
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                        id: "location",
-                        value: location,
-                        placeholder: "Location"
-                    }, void 0, false, {
-                        fileName: "src/SearchParams.js",
-                        lineNumber: 7,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
+                    children: [
+                        "Location ",
+                        location,
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                            id: "location",
+                            placeholder: "Location"
+                        }, void 0, false, {
+                            fileName: "src/SearchParams.js",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
                     fileName: "src/SearchParams.js",
-                    lineNumber: 6,
+                    lineNumber: 8,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
                     children: " Submit "
                 }, void 0, false, {
                     fileName: "src/SearchParams.js",
-                    lineNumber: 9,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/SearchParams.js",
-            lineNumber: 5,
+            lineNumber: 7,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/SearchParams.js",
-        lineNumber: 4,
+        lineNumber: 6,
         columnNumber: 5
     }, undefined));
 };
+_s(SearchParams, "JMkk70NnkYHwacJIVl+G29lh6iI=");
 _c = SearchParams;
 exports.default = SearchParams;
 var _c;
@@ -23006,6 +23013,6 @@ $RefreshReg$(_c, "SearchParams");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
 
 //# sourceMappingURL=index.7271efb6.js.map
