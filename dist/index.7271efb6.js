@@ -23242,37 +23242,61 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Pet = (props)=>{
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+const Pet = ({ name , animal , breed , images , location , id  })=>{
+    let hero = "http://pet-images.dev-apis.cm/pets/none.jpg";
+    if (images.length) hero = images[0];
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+        href: `/details/${id}`,
+        className: "pet",
         children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "image-container",
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                    src: hero,
+                    alt: name
+                }, void 0, false, {
+                    fileName: "src/Pet.js",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/Pet.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "info",
                 children: [
-                    props.name,
-                    " "
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/Pet.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                        children: [
+                            animal,
+                            " - ",
+                            breed,
+                            " - ",
+                            location
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Pet.js",
+                        lineNumber: 13,
+                        columnNumber: 9
+                    }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Pet.js",
-                lineNumber: 4,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                children: props.animal
-            }, void 0, false, {
-                fileName: "src/Pet.js",
-                lineNumber: 5,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                children: props.breed
-            }, void 0, false, {
-                fileName: "src/Pet.js",
-                lineNumber: 6,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Pet.js",
-        lineNumber: 3,
+        lineNumber: 7,
         columnNumber: 5
     }, undefined));
 };
