@@ -22997,14 +22997,13 @@ const SearchParams = ()=>{
                             location,
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
                                 id: "location",
-                                placeholder: "Location"
+                                placeholder: "Location",
+                                onChange: (e)=>setLocation(e.target.value)
                             }, void 0, false, {
                                 fileName: "src/SearchParams.js",
                                 lineNumber: 30,
                                 columnNumber: 11
-                            }, undefined),
-                            "onChange= ",
-                            (e)=>setLocation(e.target.value)
+                            }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/SearchParams.js",
@@ -23030,7 +23029,7 @@ const SearchParams = ()=>{
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
                                     }, void 0, false, {
                                         fileName: "src/SearchParams.js",
-                                        lineNumber: 47,
+                                        lineNumber: 50,
                                         columnNumber: 13
                                     }, undefined),
                                     ANIMALS.map((animal)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
@@ -23038,20 +23037,20 @@ const SearchParams = ()=>{
                                             children: animal
                                         }, animal, false, {
                                             fileName: "src/SearchParams.js",
-                                            lineNumber: 49,
+                                            lineNumber: 52,
                                             columnNumber: 15
                                         }, undefined)
                                     )
                                 ]
                             }, void 0, true, {
                                 fileName: "src/SearchParams.js",
-                                lineNumber: 35,
+                                lineNumber: 38,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/SearchParams.js",
-                        lineNumber: 33,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
@@ -23071,7 +23070,7 @@ const SearchParams = ()=>{
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
                                     }, void 0, false, {
                                         fileName: "src/SearchParams.js",
-                                        lineNumber: 67,
+                                        lineNumber: 70,
                                         columnNumber: 13
                                     }, undefined),
                                     breeds.map((breed)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
@@ -23079,27 +23078,27 @@ const SearchParams = ()=>{
                                             children: breed
                                         }, breed, false, {
                                             fileName: "src/SearchParams.js",
-                                            lineNumber: 69,
+                                            lineNumber: 72,
                                             columnNumber: 15
                                         }, undefined)
                                     )
                                 ]
                             }, void 0, true, {
                                 fileName: "src/SearchParams.js",
-                                lineNumber: 57,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/SearchParams.js",
-                        lineNumber: 55,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
                         children: " Submit "
                     }, void 0, false, {
                         fileName: "src/SearchParams.js",
-                        lineNumber: 75,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -23114,7 +23113,7 @@ const SearchParams = ()=>{
                     breed: pet.breed
                 }, pet.id, false, {
                     fileName: "src/SearchParams.js",
-                    lineNumber: 78,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, undefined)
             )

@@ -27,8 +27,11 @@ const SearchParams = () => {
       <form>
         <label htmlFor="location">
           Location {location}
-          <input id="location" placeholder="Location" />
-          onChange= {(e) => setLocation(e.target.value)}
+          <input
+            id="location"
+            placeholder="Location"
+            onChange={(e) => setLocation(e.target.value)}
+          />
         </label>
         <label htmlFor="animal">
           Animal
