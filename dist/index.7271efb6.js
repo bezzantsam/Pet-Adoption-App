@@ -22956,6 +22956,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _pet = require("./Pet");
+var _petDefault = parcelHelpers.interopDefault(_pet);
 var _s = $RefreshSig$();
 const ANIMALS = [
     "bird",
@@ -22968,6 +22970,19 @@ const SearchParams = ()=>{
     _s();
     const [location, setLocation] = _react.useState("");
     const [animal1, setAnimal] = _react.useState("");
+    const [breed1, setbreed] = _react.useState("");
+    const breeds = [
+        "poodle",
+        "chihuahua",
+        "lab"
+    ];
+    const [pets, setPets] = _react.useState([]);
+    _react.useEffect(()=>{
+        requestPets();
+    }, []);
+    async function requestPets() {
+        const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal1}&location=${location}&breed=${breed1}`);
+    }
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "search-params",
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
@@ -22982,7 +22997,7 @@ const SearchParams = ()=>{
                             placeholder: "Location"
                         }, void 0, false, {
                             fileName: "src/SearchParams.js",
-                            lineNumber: 13,
+                            lineNumber: 27,
                             columnNumber: 11
                         }, undefined),
                         "onChange= ",
@@ -22990,7 +23005,7 @@ const SearchParams = ()=>{
                     ]
                 }, void 0, true, {
                     fileName: "src/SearchParams.js",
-                    lineNumber: 11,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
@@ -23012,7 +23027,7 @@ const SearchParams = ()=>{
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
                                 }, void 0, false, {
                                     fileName: "src/SearchParams.js",
-                                    lineNumber: 30,
+                                    lineNumber: 44,
                                     columnNumber: 13
                                 }, undefined),
                                 ANIMALS.map((animal)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
@@ -23020,42 +23035,83 @@ const SearchParams = ()=>{
                                         children: animal
                                     }, animal, false, {
                                         fileName: "src/SearchParams.js",
-                                        lineNumber: 32,
+                                        lineNumber: 46,
                                         columnNumber: 15
                                     }, undefined)
                                 )
                             ]
                         }, void 0, true, {
                             fileName: "src/SearchParams.js",
-                            lineNumber: 18,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/SearchParams.js",
-                    lineNumber: 16,
+                    lineNumber: 30,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                    htmlFor: "breed",
+                    children: [
+                        "Breed",
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
+                            id: "breed",
+                            value: breed1,
+                            onChange: (e)=>{
+                                setBreed(e.target.value);
+                            },
+                            onBlur: (e)=>{
+                                setBreed(e.target.value);
+                            },
+                            children: [
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                }, void 0, false, {
+                                    fileName: "src/SearchParams.js",
+                                    lineNumber: 64,
+                                    columnNumber: 13
+                                }, undefined),
+                                breeds.map((breed)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                        value: breed,
+                                        children: breed
+                                    }, breed, false, {
+                                        fileName: "src/SearchParams.js",
+                                        lineNumber: 66,
+                                        columnNumber: 15
+                                    }, undefined)
+                                )
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/SearchParams.js",
+                            lineNumber: 54,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/SearchParams.js",
+                    lineNumber: 52,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
                     children: " Submit "
                 }, void 0, false, {
                     fileName: "src/SearchParams.js",
-                    lineNumber: 38,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/SearchParams.js",
-            lineNumber: 10,
+            lineNumber: 24,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/SearchParams.js",
-        lineNumber: 9,
+        lineNumber: 23,
         columnNumber: 5
     }, undefined));
 };
-_s(SearchParams, "cckQz6ZRSzgY8/FZdk5FpZDd7S8=");
+_s(SearchParams, "nUXfB9nYSuz6/B0zTBwxXy5Q9hI=");
 _c = SearchParams;
 exports.default = SearchParams;
 var _c;
@@ -23066,6 +23122,60 @@ $RefreshReg$(_c, "SearchParams");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./Pet":"98zmG"}],"98zmG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$acd4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$acd4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Pet = (props)=>{
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                children: [
+                    props.name,
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "src/Pet.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                children: props.animal
+            }, void 0, false, {
+                fileName: "src/Pet.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                children: props.breed
+            }, void 0, false, {
+                fileName: "src/Pet.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Pet.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined));
+};
+_c = Pet;
+exports.default = Pet;
+var _c;
+$RefreshReg$(_c, "Pet");
+
+  $parcel$ReactRefreshHelpers$acd4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
 
 //# sourceMappingURL=index.7271efb6.js.map
