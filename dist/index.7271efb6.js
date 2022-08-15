@@ -1015,8 +1015,7 @@ var _details = require("./Details");
 var _detailsDefault = parcelHelpers.interopDefault(_details);
 const App = ()=>{
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(StrictMode, {
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-            id: "my-app",
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                     children: " Adopt Me!"
@@ -1025,8 +1024,28 @@ const App = ()=>{
                     lineNumber: 12,
                     columnNumber: 9
                 }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_searchParamsDefault.default, {
-                }, void 0, false, {
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Route, {
+                            path: "/details/:id",
+                            element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_detailsDefault.default, {
+                            }, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 14,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Route, {
+                            path: "/",
+                            element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_searchParamsDefault.default, {
+                            }, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
                     fileName: "src/App.js",
                     lineNumber: 13,
                     columnNumber: 9
@@ -1047,7 +1066,7 @@ _c = App;
 _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 19,
+    lineNumber: 22,
     columnNumber: 8
 }, undefined), document.getElementById("root"));
 var _c;
