@@ -25175,37 +25175,87 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
-var _s = $RefreshSig$();
-const Details = ()=>{
-    _s();
-    const { id  } = _reactRouterDom.useParams();
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-        children: [
-            " ",
-            id
-        ]
-    }, void 0, true, {
-        fileName: "src/Details.js",
-        lineNumber: 5,
-        columnNumber: 10
-    }, undefined));
-};
-_s(Details, "yQgCIz/jJfqV1l9s2yoba81MT5A=", false, function() {
-    return [
-        _reactRouterDom.useParams
-    ];
-});
-_c = Details;
+class Details extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            loading: true
+        };
+    }
+    render() {
+        if (this.state.loading) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+            children: " loading... "
+        }, void 0, false, {
+            fileName: "src/Details.js",
+            lineNumber: 13,
+            columnNumber: 14
+        }, this));
+        const { animal , breed , city , state , description , name  } = this.state;
+        return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+            className: "details",
+            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/Details.js",
+                        lineNumber: 21,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                        children: [
+                            breed,
+                            " - ",
+                            animal,
+                            " - ",
+                            city,
+                            ", ",
+                            state
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Details.js",
+                        lineNumber: 22,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                        children: [
+                            "Adopt ",
+                            name
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Details.js",
+                        lineNumber: 25,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                        children: description
+                    }, void 0, false, {
+                        fileName: "src/Details.js",
+                        lineNumber: 26,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/Details.js",
+                lineNumber: 20,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "src/Details.js",
+            lineNumber: 19,
+            columnNumber: 7
+        }, this));
+    }
+}
 exports.default = Details;
-var _c;
-$RefreshReg$(_c, "Details");
 
   $parcel$ReactRefreshHelpers$0da2.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
+},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw","react":"21dqq","react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
 
 //# sourceMappingURL=index.7271efb6.js.map
