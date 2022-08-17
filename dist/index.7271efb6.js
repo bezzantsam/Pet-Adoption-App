@@ -25177,6 +25177,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
 class Details extends _react.Component {
     constructor(props){
         super(props);
@@ -25184,12 +25185,19 @@ class Details extends _react.Component {
             loading: true
         };
     }
+    async componentDidMount() {
+        const res = await fetch(`http://pets-v2.dev-apis.com/pets?id=${this.props.params.id}`);
+        const json = await res.json();
+        this.setState(Object.assign({
+            loading: false
+        }, json.pets[0]));
+    }
     render() {
         if (this.state.loading) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
             children: " loading... "
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 13,
+            lineNumber: 22,
             columnNumber: 14
         }, this));
         const { animal , breed , city , state , description , name  } = this.state;
@@ -25201,7 +25209,7 @@ class Details extends _react.Component {
                         children: name
                     }, void 0, false, {
                         fileName: "src/Details.js",
-                        lineNumber: 21,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
@@ -25216,7 +25224,7 @@ class Details extends _react.Component {
                         ]
                     }, void 0, true, {
                         fileName: "src/Details.js",
-                        lineNumber: 22,
+                        lineNumber: 31,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
@@ -25226,30 +25234,49 @@ class Details extends _react.Component {
                         ]
                     }, void 0, true, {
                         fileName: "src/Details.js",
-                        lineNumber: 25,
+                        lineNumber: 34,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                         children: description
                     }, void 0, false, {
                         fileName: "src/Details.js",
-                        lineNumber: 26,
+                        lineNumber: 35,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/Details.js",
-                lineNumber: 20,
+                lineNumber: 29,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 19,
+            lineNumber: 28,
             columnNumber: 7
         }, this));
     }
 }
-exports.default = Details;
+const WrappedDetails = ()=>{
+    _s();
+    const params = _reactRouterDom.useParams();
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(Details, {
+        params: params
+    }, void 0, false, {
+        fileName: "src/Details.js",
+        lineNumber: 43,
+        columnNumber: 10
+    }, undefined));
+};
+_s(WrappedDetails, "+jVsTcECDRo3yq2d7EQxlN9Ixog=", false, function() {
+    return [
+        _reactRouterDom.useParams
+    ];
+});
+_c = WrappedDetails;
+exports.default = WrappedDetails;
+var _c;
+$RefreshReg$(_c, "WrappedDetails");
 
   $parcel$ReactRefreshHelpers$0da2.postlude(module);
 } finally {
