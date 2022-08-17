@@ -23277,11 +23277,12 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
 const Pet = ({ name , animal , breed , images , location , id  })=>{
     let hero = "http://pet-images.dev-apis.cm/pets/none.jpg";
     if (images.length) hero = images[0];
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-        href: `/details/${id}`,
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+        to: `/details/${id}`,
         className: "pet",
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -23291,12 +23292,12 @@ const Pet = ({ name , animal , breed , images , location , id  })=>{
                     alt: name
                 }, void 0, false, {
                     fileName: "src/Pet.js",
-                    lineNumber: 9,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Pet.js",
-                lineNumber: 8,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -23306,7 +23307,7 @@ const Pet = ({ name , animal , breed , images , location , id  })=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/Pet.js",
-                        lineNumber: 12,
+                        lineNumber: 14,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
@@ -23319,19 +23320,19 @@ const Pet = ({ name , animal , breed , images , location , id  })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/Pet.js",
-                        lineNumber: 13,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Pet.js",
-                lineNumber: 11,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Pet.js",
-        lineNumber: 7,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined));
 };
@@ -23345,7 +23346,7 @@ $RefreshReg$(_c, "Pet");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fdOAw":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw"}],"fdOAw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>_reactRouter.MemoryRouter
