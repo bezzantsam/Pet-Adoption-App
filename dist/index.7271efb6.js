@@ -1014,11 +1014,18 @@ var _searchParamsDefault = parcelHelpers.interopDefault(_searchParams);
 var _details = require("./Details");
 var _detailsDefault = parcelHelpers.interopDefault(_details);
 const App = ()=>{
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(StrictMode, {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_react.StrictMode, {
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
             children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                    children: " Adopt Me!"
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("header", {
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                        to: "/",
+                        children: " Adopt Me!"
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 13,
+                        columnNumber: 11
+                    }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
                     lineNumber: 12,
@@ -1026,28 +1033,28 @@ const App = ()=>{
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
                     children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Route, {
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
                             path: "/details/:id",
                             element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_detailsDefault.default, {
                             }, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 14,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Route, {
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
                             path: "/",
                             element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_searchParamsDefault.default, {
                             }, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 15,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 13,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -1066,7 +1073,7 @@ _c = App;
 _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 22,
+    lineNumber: 24,
     columnNumber: 8
 }, undefined), document.getElementById("root"));
 var _c;
@@ -25167,15 +25174,27 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
 const Details = ()=>{
+    _s();
+    const { id  } = _reactRouterDom.useParams();
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-        children: " Party"
-    }, void 0, false, {
+        children: [
+            " ",
+            id
+        ]
+    }, void 0, true, {
         fileName: "src/Details.js",
-        lineNumber: 2,
+        lineNumber: 5,
         columnNumber: 10
     }, undefined));
 };
+_s(Details, "yQgCIz/jJfqV1l9s2yoba81MT5A=", false, function() {
+    return [
+        _reactRouterDom.useParams
+    ];
+});
 _c = Details;
 exports.default = Details;
 var _c;
@@ -25186,6 +25205,6 @@ $RefreshReg$(_c, "Details");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
 
 //# sourceMappingURL=index.7271efb6.js.map
