@@ -25333,6 +25333,11 @@ class Carousel extends _react.Component {
         _defineProperty(this, "state", {
             active: 0
         });
+        _defineProperty(this, "handleIndexClick", (event)=>{
+            this.setState({
+                active: +event.target.dataset.index
+            });
+        });
     }
     render() {
         const { active  } = this.state;
@@ -25345,30 +25350,32 @@ class Carousel extends _react.Component {
                     alt: "animal"
                 }, void 0, false, {
                     fileName: "src/Carousel.js",
-                    lineNumber: 24,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                     className: "carousel-smaller",
                     children: images.map((photo, index)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            onClick: this.handleIndexClick,
                             src: photo,
+                            "data-index": index,
                             className: index === active ? "active" : "",
                             alt: "animal thumbnail"
                         }, photo, false, {
                             fileName: "src/Carousel.js",
-                            lineNumber: 27,
+                            lineNumber: 33,
                             columnNumber: 9
                         }, this)
                     )
                 }, void 0, false, {
                     fileName: "src/Carousel.js",
-                    lineNumber: 25,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/Carousel.js",
-            lineNumber: 23,
+            lineNumber: 29,
             columnNumber: 12
         }, this));
     }
