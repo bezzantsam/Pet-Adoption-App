@@ -25177,6 +25177,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
+var _carousel = require("./Carousel");
+var _carouselDefault = parcelHelpers.interopDefault(_carousel);
 var _s = $RefreshSig$();
 function _defineProperty(obj, key, value) {
     if (key in obj) Object.defineProperty(obj, key, {
@@ -25207,62 +25209,71 @@ class Details extends _react.Component {
             children: " loading... "
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 25,
+            lineNumber: 26,
             columnNumber: 14
         }, this));
-        const { animal , breed , city , state , description , name  } = this.state;
+        const { animal , breed , city , state , description , name , images  } = this.state;
         return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
             className: "details",
-            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                        children: name
-                    }, void 0, false, {
-                        fileName: "src/Details.js",
-                        lineNumber: 38,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                        children: [
-                            breed,
-                            " - ",
-                            animal,
-                            " - ",
-                            city,
-                            ", ",
-                            state
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Details.js",
-                        lineNumber: 39,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                        children: [
-                            "Adopt ",
-                            name
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Details.js",
-                        lineNumber: 42,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                        children: description
-                    }, void 0, false, {
-                        fileName: "src/Details.js",
-                        lineNumber: 43,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/Details.js",
-                lineNumber: 37,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_carouselDefault.default, {
+                    images: images
+                }, void 0, false, {
+                    fileName: "src/Details.js",
+                    lineNumber: 39,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                            children: name
+                        }, void 0, false, {
+                            fileName: "src/Details.js",
+                            lineNumber: 41,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                            children: [
+                                breed,
+                                " - ",
+                                animal,
+                                " - ",
+                                city,
+                                ", ",
+                                state
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Details.js",
+                            lineNumber: 42,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                            children: [
+                                "Adopt ",
+                                name
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Details.js",
+                            lineNumber: 45,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                            children: description
+                        }, void 0, false, {
+                            fileName: "src/Details.js",
+                            lineNumber: 46,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/Details.js",
+                    lineNumber: 40,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "src/Details.js",
-            lineNumber: 36,
+            lineNumber: 38,
             columnNumber: 12
         }, this));
     }
@@ -25274,7 +25285,7 @@ const WrappedDetails = ()=>{
         params: params
     }, void 0, false, {
         fileName: "src/Details.js",
-        lineNumber: 52,
+        lineNumber: 55,
         columnNumber: 10
     }, undefined));
 }; // const Details = () => {
@@ -25293,6 +25304,87 @@ $RefreshReg$(_c, "WrappedDetails");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw","react":"21dqq","react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
+},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw","react":"21dqq","react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Carousel":"1lXBA"}],"1lXBA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9e23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9e23.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react"); //other option
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+// import React from "react"
+// class Carousel extends React.Component {}
+class Carousel extends _react.Component {
+    constructor(...args){
+        super(...args);
+        _defineProperty(this, "state", {
+            active: 0
+        });
+    }
+    render() {
+        const { active  } = this.state;
+        const { images  } = this.props;
+        return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+            className: "carousel",
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                    src: images[active],
+                    alt: "animal"
+                }, void 0, false, {
+                    fileName: "src/Carousel.js",
+                    lineNumber: 24,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    className: "carousel-smaller",
+                    children: images.map((photo, index)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            src: photo,
+                            className: index === active ? "active" : "",
+                            alt: "animal thumbnail"
+                        }, photo, false, {
+                            fileName: "src/Carousel.js",
+                            lineNumber: 27,
+                            columnNumber: 9
+                        }, this)
+                    )
+                }, void 0, false, {
+                    fileName: "src/Carousel.js",
+                    lineNumber: 25,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/Carousel.js",
+            lineNumber: 23,
+            columnNumber: 12
+        }, this));
+    }
+}
+_defineProperty(Carousel, "defaultProps", {
+    images: [
+        "http://pets-images.dev-apis.com/pets/none.jpg"
+    ]
+});
+exports.default = Carousel;
+
+  $parcel$ReactRefreshHelpers$9e23.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
 
 //# sourceMappingURL=index.7271efb6.js.map
