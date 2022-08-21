@@ -10,13 +10,20 @@ class ErrorBoundary extends Component {
   componentDidCatch(error, info) {
     console.error(error, info);
   }
-  render() {
+
+  componentDidUpdate() {
     if (this.state.hasError) {
+      setTimeout(() => this.setState({ redirect: true }), 5000);
+    }
+  }
+  render() {
+    if (this.state.redirect) {
+      return <Navigate to="/" />;
+    } else if (this.state.hasError) {
       return (
         <h2>
           There was an error
-          <Link to="/"> Click here to return to homepage</Link> Or wait five
-          seconds
+          <Link to="/"> Click here </Link> Or wait five seconds
         </h2>
       );
     }

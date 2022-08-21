@@ -1070,12 +1070,7 @@ const App = ()=>{
     }, undefined));
 };
 _c = App;
-_reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {
-}, void 0, false, {
-    fileName: "src/App.js",
-    lineNumber: 22,
-    columnNumber: 8
-}, undefined), document.getElementById("root"));
+ReactDOM.render(/*#__PURE__*/ _reactDefault.default.createElement(App), document.getElementById("root"));
 var _c;
 $RefreshReg$(_c, "App");
 
@@ -25214,7 +25209,7 @@ class Details extends _react.Component {
             lineNumber: 27,
             columnNumber: 14
         }, this));
-        throw new Error("lmao bbq");
+        throw new Error("fuck you");
     }
 }
 const WrappedDetails = ()=>{
@@ -25362,23 +25357,36 @@ class ErrorBoundary extends _react.Component {
     componentDidCatch(error, info) {
         console.error(error, info);
     }
+    componentDidUpdate() {
+        if (this.state.hasError) setTimeout(()=>this.setState({
+                redirect: true
+            })
+        , 5000);
+    }
     render() {
-        if (this.state.hasError) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+        if (this.state.redirect) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(Navigate, {
+            to: "/"
+        }, void 0, false, {
+            fileName: "src/ErrorBoundary.js",
+            lineNumber: 35,
+            columnNumber: 14
+        }, this));
+        else if (this.state.hasError) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
             children: [
                 "There was an error",
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                     to: "/",
-                    children: " Click here to return to homepage"
+                    children: " Click here "
                 }, void 0, false, {
                     fileName: "src/ErrorBoundary.js",
-                    lineNumber: 29,
+                    lineNumber: 39,
                     columnNumber: 11
                 }, this),
                 " Or wait five seconds"
             ]
         }, void 0, true, {
             fileName: "src/ErrorBoundary.js",
-            lineNumber: 27,
+            lineNumber: 37,
             columnNumber: 14
         }, this));
         return this.props.children;

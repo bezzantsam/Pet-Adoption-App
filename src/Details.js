@@ -25,7 +25,7 @@ class Details extends Component {
       return <h2> loading... </h2>;
     }
 
-    throw new Error("lmao bbq");
+    throw new Error("fuck you");
 
     const { animal, breed, city, state, description, name, images } =
       this.state;
