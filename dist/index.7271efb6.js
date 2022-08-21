@@ -25179,6 +25179,8 @@ var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
 var _carousel = require("./Carousel");
 var _carouselDefault = parcelHelpers.interopDefault(_carousel);
+var _errorBoundary = require("./ErrorBoundary");
+var _errorBoundaryDefault = parcelHelpers.interopDefault(_errorBoundary);
 var _s = $RefreshSig$();
 function _defineProperty(obj, key, value) {
     if (key in obj) Object.defineProperty(obj, key, {
@@ -25209,85 +25211,16 @@ class Details extends _react.Component {
             children: " loading... "
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 14
         }, this));
-        const { animal , breed , city , state , description , name , images  } = this.state;
-        return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-            className: "details",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_carouselDefault.default, {
-                    images: images
-                }, void 0, false, {
-                    fileName: "src/Details.js",
-                    lineNumber: 39,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                    children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                            children: name
-                        }, void 0, false, {
-                            fileName: "src/Details.js",
-                            lineNumber: 41,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                            children: [
-                                breed,
-                                " - ",
-                                animal,
-                                " - ",
-                                city,
-                                ", ",
-                                state
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/Details.js",
-                            lineNumber: 42,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                            children: [
-                                "Adopt ",
-                                name
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/Details.js",
-                            lineNumber: 45,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                            children: description
-                        }, void 0, false, {
-                            fileName: "src/Details.js",
-                            lineNumber: 46,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/Details.js",
-                    lineNumber: 40,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/Details.js",
-            lineNumber: 38,
-            columnNumber: 12
-        }, this));
+        throw new Error("lmao bbq");
     }
 }
 const WrappedDetails = ()=>{
     _s();
     const params = _reactRouterDom.useParams();
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(Details, {
-        params: params
-    }, void 0, false, {
-        fileName: "src/Details.js",
-        lineNumber: 55,
-        columnNumber: 10
-    }, undefined));
+    return;
 }; // const Details = () => {
 _s(WrappedDetails, "+jVsTcECDRo3yq2d7EQxlN9Ixog=", false, function() {
     return [
@@ -25304,7 +25237,7 @@ $RefreshReg$(_c, "WrappedDetails");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw","react":"21dqq","react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Carousel":"1lXBA"}],"1lXBA":[function(require,module,exports) {
+},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw","react":"21dqq","react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Carousel":"1lXBA","./ErrorBoundary":"dNDjy"}],"1lXBA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9e23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25392,6 +25325,72 @@ exports.default = Carousel;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dNDjy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c6cd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c6cd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+class ErrorBoundary extends _react.Component {
+    constructor(...args){
+        super(...args);
+        _defineProperty(this, "state", {
+            hasError: false
+        });
+    }
+    static getDerivedStateFromError() {
+        return {
+            hasError: true
+        };
+    }
+    componentDidCatch(error, info) {
+        console.error(error, info);
+    }
+    render() {
+        if (this.state.hasError) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+            children: [
+                "There was an error",
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                    to: "/",
+                    children: " Click here to return to homepage"
+                }, void 0, false, {
+                    fileName: "src/ErrorBoundary.js",
+                    lineNumber: 29,
+                    columnNumber: 11
+                }, this),
+                " Or wait five seconds"
+            ]
+        }, void 0, true, {
+            fileName: "src/ErrorBoundary.js",
+            lineNumber: 27,
+            columnNumber: 14
+        }, this));
+        return this.props.children;
+    }
+}
+exports.default = ErrorBoundary;
+
+  $parcel$ReactRefreshHelpers$c6cd.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","1MduV","2kQhy"], "2kQhy", "parcelRequirea738")
 
 //# sourceMappingURL=index.7271efb6.js.map
