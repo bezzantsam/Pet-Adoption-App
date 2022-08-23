@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/bezzantsam/Pet-Adoption-App#readme",
   "devDependencies": {
-    "@babel/core": "^7.18.13",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
