@@ -15,9 +15,8 @@ class Details extends Component {
     const json = await res.json();
     this.setState(Object.assign({ loading: false }, json.pets[0]));
   }
-
   toggleModal = () => this.setState({ showModal: !this.state.showModal });
-
+  adopt = () => (window.location = "http://bit.ly/pet-adopt");
   render() {
     if (this.state.loading) {
       return <h2>loading … </h2>;
@@ -48,8 +47,8 @@ class Details extends Component {
               <div>
                 <h1>Would you like to adopt {name}?</h1>
                 <div className="buttons">
-                  <a href="https://bit.ly/pet-adopt"> Yes </a>
-                  <button onClick={this.toggleModal}> No </button>
+                  <a href="https://bit.ly/pet-adopt">Yes</a>
+                  <button onClick={this.toggleModal}>No</button>
                 </div>
               </div>
             </Modal>

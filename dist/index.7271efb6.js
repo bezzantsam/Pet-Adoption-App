@@ -25302,6 +25302,8 @@ class Details extends _react.Component {
                 showModal: !this.state.showModal
             })
         );
+        _defineProperty(this, "adopt", ()=>window.location = "http://bit.ly/pet-adopt"
+        );
     }
     async componentDidMount() {
         const res = await fetch(`http://pets-v2.dev-apis.com/pets?id=${this.props.params.id}`);
@@ -25315,7 +25317,7 @@ class Details extends _react.Component {
             children: "loading … "
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 34,
+            lineNumber: 36,
             columnNumber: 14
         }, this));
         const { animal , breed , city , state , description , name , images , showModal  } = this.state;
@@ -25326,7 +25328,7 @@ class Details extends _react.Component {
                     images: images
                 }, void 0, false, {
                     fileName: "src/Details.js",
-                    lineNumber: 48,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -25335,14 +25337,14 @@ class Details extends _react.Component {
                             children: name
                         }, void 0, false, {
                             fileName: "src/Details.js",
-                            lineNumber: 50,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
                             children: `${animal} — ${breed} — ${city}, ${state}`
                         }, void 0, false, {
                             fileName: "src/Details.js",
-                            lineNumber: 51,
+                            lineNumber: 53,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_themeContextDefault.default.Consumer, {
@@ -25357,19 +25359,19 @@ class Details extends _react.Component {
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/Details.js",
-                                    lineNumber: 53,
+                                    lineNumber: 55,
                                     columnNumber: 27
                                 }, this)
                         }, void 0, false, {
                             fileName: "src/Details.js",
-                            lineNumber: 52,
+                            lineNumber: 54,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                             children: description
                         }, void 0, false, {
                             fileName: "src/Details.js",
-                            lineNumber: 59,
+                            lineNumber: 61,
                             columnNumber: 11
                         }, this),
                         showModal ? /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_modalDefault.default, {
@@ -25383,7 +25385,7 @@ class Details extends _react.Component {
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/Details.js",
-                                        lineNumber: 62,
+                                        lineNumber: 64,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -25391,47 +25393,47 @@ class Details extends _react.Component {
                                         children: [
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
                                                 href: "https://bit.ly/pet-adopt",
-                                                children: " Yes "
+                                                children: "Yes"
                                             }, void 0, false, {
                                                 fileName: "src/Details.js",
-                                                lineNumber: 64,
+                                                lineNumber: 66,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
                                                 onClick: this.toggleModal,
-                                                children: " No "
+                                                children: "No"
                                             }, void 0, false, {
                                                 fileName: "src/Details.js",
-                                                lineNumber: 65,
+                                                lineNumber: 67,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/Details.js",
-                                        lineNumber: 63,
+                                        lineNumber: 65,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Details.js",
-                                lineNumber: 61,
+                                lineNumber: 63,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "src/Details.js",
-                            lineNumber: 60,
+                            lineNumber: 62,
                             columnNumber: 24
                         }, this) : null
                     ]
                 }, void 0, true, {
                     fileName: "src/Details.js",
-                    lineNumber: 49,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/Details.js",
-            lineNumber: 47,
+            lineNumber: 49,
             columnNumber: 12
         }, this));
     }
@@ -25444,12 +25446,12 @@ const WrappedDetails = ()=>{
             params: params
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 78,
+            lineNumber: 80,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Details.js",
-        lineNumber: 77,
+        lineNumber: 79,
         columnNumber: 10
     }, undefined));
 };
@@ -25582,7 +25584,8 @@ class ErrorBoundary extends _react.Component {
     constructor(...args){
         super(...args);
         _defineProperty(this, "state", {
-            hasError: false
+            hasError: false,
+            redirect: false
         });
     }
     static getDerivedStateFromError() {
@@ -25591,7 +25594,7 @@ class ErrorBoundary extends _react.Component {
         };
     }
     componentDidCatch(error, info) {
-        console.error(error, info);
+        console.error("ErrorBoundary caught an error", error, info);
     }
     componentDidUpdate() {
         if (this.state.hasError) setTimeout(()=>this.setState({
@@ -25600,29 +25603,30 @@ class ErrorBoundary extends _react.Component {
         , 5000);
     }
     render() {
-        if (this.state.redirect) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(Navigate, {
+        if (this.state.redirect) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Navigate, {
             to: "/"
         }, void 0, false, {
             fileName: "src/ErrorBoundary.js",
-            lineNumber: 35,
+            lineNumber: 36,
             columnNumber: 14
         }, this));
         else if (this.state.hasError) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
             children: [
-                "There was an error",
+                "There was an error with this listing. ",
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                     to: "/",
-                    children: " Click here "
+                    children: "Click here"
                 }, void 0, false, {
                     fileName: "src/ErrorBoundary.js",
                     lineNumber: 39,
-                    columnNumber: 11
+                    columnNumber: 49
                 }, this),
-                " Or wait five seconds"
+                " ",
+                "to back to the home page or wait five seconds."
             ]
         }, void 0, true, {
             fileName: "src/ErrorBoundary.js",
-            lineNumber: 37,
+            lineNumber: 38,
             columnNumber: 14
         }, this));
         return this.props.children;
@@ -25646,24 +25650,22 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _s = $RefreshSig$();
 const Modal = ({ children  })=>{
     _s();
     const elRef = _react.useRef(null);
-    if (!elRef.current) eRef.current = document.createElement("div");
+    if (!elRef.current) elRef.current = document.createElement("div");
     _react.useEffect(()=>{
-        const modalRoot = document.getElementsById("modal");
+        const modalRoot = document.getElementById("modal");
         modalRoot.appendChild(elRef.current);
         return ()=>modalRoot.removeChild(elRef.current)
         ;
     }, []);
     return(/*#__PURE__*/ _reactDom.createPortal(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: [
-            children,
-            " "
-        ]
-    }, void 0, true, {
+        children: children
+    }, void 0, false, {
         fileName: "src/Modal.js",
         lineNumber: 18,
         columnNumber: 23
