@@ -25347,7 +25347,7 @@ class Details extends _react.Component {
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_themeContextDefault.default.Consumer, {
                             children: ([theme])=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                                    onClick: this.showModal,
+                                    onClick: this.toggleModal,
                                     style: {
                                         backgroundColor: theme
                                     },
@@ -25386,20 +25386,29 @@ class Details extends _react.Component {
                                         lineNumber: 62,
                                         columnNumber: 17
                                     }, this),
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                                        href: "https://bit.ly/pet-adopt",
-                                        children: " Yes "
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "buttons",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                                                href: "https://bit.ly/pet-adopt",
+                                                children: " Yes "
+                                            }, void 0, false, {
+                                                fileName: "src/Details.js",
+                                                lineNumber: 64,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                                                onClick: this.toggleModal,
+                                                children: " No "
+                                            }, void 0, false, {
+                                                fileName: "src/Details.js",
+                                                lineNumber: 65,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/Details.js",
                                         lineNumber: 63,
-                                        columnNumber: 17
-                                    }, this),
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                                        onClick: this.toggleModal,
-                                        children: " No "
-                                    }, void 0, false, {
-                                        fileName: "src/Details.js",
-                                        lineNumber: 64,
                                         columnNumber: 17
                                     }, this)
                                 ]
@@ -25435,12 +25444,12 @@ const WrappedDetails = ()=>{
             params: params
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 76,
+            lineNumber: 78,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Details.js",
-        lineNumber: 75,
+        lineNumber: 77,
         columnNumber: 10
     }, undefined));
 };

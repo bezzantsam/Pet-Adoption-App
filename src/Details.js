@@ -35,7 +35,7 @@ class Details extends Component {
           <ThemeContext.Consumer>
             {([theme]) => (
               <button
-                onClick={this.showModal}
+                onClick={this.toggleModal}
                 style={{ backgroundColor: theme }}
               >
                 Adopt {name}
@@ -47,8 +47,10 @@ class Details extends Component {
             <Modal>
               <div>
                 <h1>Would you like to adopt {name}?</h1>
-                <a href="https://bit.ly/pet-adopt"> Yes </a>
-                <button onClick={this.toggleModal}> No </button>
+                <div className="buttons">
+                  <a href="https://bit.ly/pet-adopt"> Yes </a>
+                  <button onClick={this.toggleModal}> No </button>
+                </div>
               </div>
             </Modal>
           ) : null}
